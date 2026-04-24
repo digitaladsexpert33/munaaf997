@@ -26,7 +26,6 @@ padding:20px;
 color:#fff;
 }
 
-/* CONTAINER */
 .container{
 max-width:420px;
 width:100%;
@@ -41,7 +40,6 @@ position:relative;
 overflow:hidden;
 }
 
-/* GLOW EFFECT */
 .container::before{
 content:'';
 position:absolute;
@@ -53,7 +51,6 @@ right:-140px;
 opacity:.15;
 }
 
-/* AVATAR */
 .avatar{
 width:105px;
 height:105px;
@@ -70,7 +67,6 @@ height:100%;
 object-fit:cover;
 }
 
-/* TEXT */
 .title{
 font-size:22px;
 font-weight:800;
@@ -87,7 +83,6 @@ color:#facc15;
 font-weight:600;
 }
 
-/* BADGE */
 .badge{
 display:inline-block;
 margin:14px 0 20px;
@@ -99,7 +94,6 @@ background:linear-gradient(135deg,#facc15,#eab308);
 color:#000;
 }
 
-/* CTA */
 .btn{
 display:block;
 margin:16px 0;
@@ -122,14 +116,12 @@ animation:pulse 2s infinite;
 transform:translateY(-3px) scale(1.02);
 }
 
-/* PULSE */
 @keyframes pulse{
 0%{box-shadow:0 0 10px rgba(34,197,94,.4);}
 50%{box-shadow:0 0 30px rgba(34,197,94,.9);}
 100%{box-shadow:0 0 10px rgba(34,197,94,.4);}
 }
 
-/* LIST */
 .list{
 text-align:left;
 margin:16px 0;
@@ -141,7 +133,6 @@ margin:8px 0;
 opacity:.9;
 }
 
-/* URGENCY */
 .urgency{
 font-size:12px;
 color:#f87171;
@@ -149,14 +140,12 @@ font-weight:600;
 margin-top:4px;
 }
 
-/* TRUST */
 .trust{
 font-size:12px;
 opacity:.75;
 margin-top:10px;
 }
 
-/* AD */
 .ad-box{
 margin-top:18px;
 padding:10px;
@@ -171,7 +160,6 @@ color:#facc15;
 text-decoration:none;
 }
 
-/* FOOTER */
 footer{
 margin-top:16px;
 font-size:10px;
@@ -183,7 +171,6 @@ color:#facc15;
 text-decoration:none;
 }
 
-/* MOBILE */
 @media(max-width:480px){
 
 .container{
@@ -203,8 +190,27 @@ font-size:14px;
 
 </style>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-  <!-- Meta Pixel Code --> <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1558503872018525'); fbq('track', 'PageView'); </script> <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1558503872018525&ev=PageView&noscript=1" /></noscript> <!-- End Meta Pixel Code -->
+fbq('init', '1558503872018525');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1558503872018525&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 
 </head>
 
@@ -226,7 +232,10 @@ YouTube Educator | <span class="highlight">Market Mentor</span>
 🔥 Trusted by 1,000,000+ Traders
 </div>
 
-<a href="https://t.me/+6YfM1aTftOI2MTc9" class="btn telegram" target="_blank">
+<!-- CTA BUTTON -->
+<a href="#" 
+class="btn telegram"
+onclick="trackSubscribe()">
 🚀 Join Free Telegram Community
 </a>
 
@@ -237,7 +246,10 @@ YouTube Educator | <span class="highlight">Market Mentor</span>
 <div class="list-item">✔ Real Trade Case Studies</div>
 </div>
 
-<a href="https://t.me/+6YfM1aTftOI2MTc9" class="btn telegram" target="_blank">
+<!-- CTA BUTTON -->
+<a href="#" 
+class="btn telegram"
+onclick="trackSubscribe()">
 🚀 Join Free Telegram Community
 </a>
 
@@ -261,6 +273,25 @@ Not affiliated with Facebook™
 </footer>
 
 </div>
+
+<!-- TRACKING SCRIPT -->
+<script>
+function trackSubscribe(){
+
+    fbq('track', 'Subscribe', {
+        content_name: 'Telegram Join',
+        content_category: 'Trading',
+        value: 1,
+        currency: 'INR'
+    });
+
+    // delay redirect to ensure event fires
+    setTimeout(function(){
+        window.open('https://t.me/+6YfM1aTftOI2MTc9','_blank');
+    }, 200);
+
+}
+</script>
 
 </body>
 </html>
