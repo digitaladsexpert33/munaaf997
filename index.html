@@ -5,8 +5,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -19,47 +17,51 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#020617,#0f172a,#020617);
+background:linear-gradient(135deg,#020617,#020617,#0f172a);
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 padding:20px;
-color:#ffffff;
+color:#fff;
 }
 
+/* CONTAINER */
 .container{
 max-width:420px;
 width:100%;
-background:#0f172a;
-border-radius:26px;
-padding:5px 5px;
+background:rgba(15,23,42,0.75);
+backdrop-filter:blur(16px);
+border-radius:28px;
+padding:28px 22px;
 text-align:center;
-border:1px solid #1e293b;
-box-shadow:0 25px 60px rgba(0,0,0,.6);
+border:1px solid rgba(255,255,255,0.06);
+box-shadow:0 30px 80px rgba(0,0,0,.7);
 position:relative;
 overflow:hidden;
 }
 
+/* GLOW EFFECT */
 .container::before{
 content:'';
 position:absolute;
-width:260px;
-height:260px;
+width:300px;
+height:300px;
 background:radial-gradient(circle,#facc15,transparent);
-top:-120px;
-right:-120px;
-opacity:.12;
+top:-140px;
+right:-140px;
+opacity:.15;
 }
 
+/* AVATAR */
 .avatar{
-width:110px;
-height:110px;
+width:105px;
+height:105px;
 border-radius:50%;
 overflow:hidden;
-margin:0 auto 18px;
+margin:0 auto 16px;
 border:3px solid #facc15;
-box-shadow:0 0 20px rgba(250,204,21,.5);
+box-shadow:0 0 25px rgba(250,204,21,.6);
 }
 
 .avatar img{
@@ -68,16 +70,16 @@ height:100%;
 object-fit:cover;
 }
 
+/* TEXT */
 .title{
-font-size:20px;
+font-size:22px;
 font-weight:800;
-letter-spacing:.5px;
 }
 
 .subtitle{
 font-size:13px;
 opacity:.8;
-margin-top:5px;
+margin-top:4px;
 }
 
 .highlight{
@@ -85,10 +87,11 @@ color:#facc15;
 font-weight:600;
 }
 
+/* BADGE */
 .badge{
 display:inline-block;
-margin:16px 0 22px;
-padding:9px 18px;
+margin:14px 0 20px;
+padding:8px 16px;
 border-radius:30px;
 font-size:12px;
 font-weight:600;
@@ -96,20 +99,10 @@ background:linear-gradient(135deg,#facc15,#eab308);
 color:#000;
 }
 
-.list{
-text-align:left;
-margin-bottom:20px;
-}
-
-.list-item{
-font-size:13px;
-margin:10px 0;
-opacity:.9;
-}
-
+/* CTA */
 .btn{
 display:block;
-margin:18px 0;
+margin:16px 0;
 padding:16px;
 border-radius:40px;
 text-decoration:none;
@@ -125,46 +118,62 @@ box-shadow:0 0 25px rgba(34,197,94,.6);
 animation:pulse 2s infinite;
 }
 
+.telegram:hover{
+transform:translateY(-3px) scale(1.02);
+}
+
+/* PULSE */
 @keyframes pulse{
-0%{box-shadow:0 0 12px rgba(34,197,94,.4);}
-50%{box-shadow:0 0 28px rgba(34,197,94,.8);}
-100%{box-shadow:0 0 12px rgba(34,197,94,.4);}
+0%{box-shadow:0 0 10px rgba(34,197,94,.4);}
+50%{box-shadow:0 0 30px rgba(34,197,94,.9);}
+100%{box-shadow:0 0 10px rgba(34,197,94,.4);}
 }
 
-.btn:hover{
-transform:translateY(-3px);
+/* LIST */
+.list{
+text-align:left;
+margin:16px 0;
 }
 
+.list-item{
+font-size:13px;
+margin:8px 0;
+opacity:.9;
+}
+
+/* URGENCY */
 .urgency{
 font-size:12px;
 color:#f87171;
 font-weight:600;
-margin-top:-5px;
+margin-top:4px;
 }
 
+/* TRUST */
 .trust{
 font-size:12px;
-opacity:.8;
-margin-top:12px;
+opacity:.75;
+margin-top:10px;
 }
 
+/* AD */
 .ad-box{
-margin-top:22px;
-padding:12px;
-border-radius:14px;
+margin-top:18px;
+padding:10px;
+border-radius:12px;
 background:#020617;
 border:1px solid #1e293b;
-font-size:12px;
+font-size:11px;
 }
 
 .ad-box a{
 color:#facc15;
 text-decoration:none;
-font-weight:600;
 }
 
+/* FOOTER */
 footer{
-margin-top:20px;
+margin-top:16px;
 font-size:10px;
 opacity:.5;
 }
@@ -174,88 +183,25 @@ color:#facc15;
 text-decoration:none;
 }
 
-/* MOBILE OPTIMIZATION */
-
-@media (max-width:480px){
-
-body{
-padding:15px;
-}
+/* MOBILE */
+@media(max-width:480px){
 
 .container{
-max-width:100%;
-padding:25px 18px;
-border-radius:20px;
-}
-
-.avatar{
-width:90px;
-height:90px;
-margin-bottom:14px;
+padding:22px 16px;
 }
 
 .title{
-font-size:18px;
-}
-
-.subtitle{
-font-size:12px;
-}
-
-.badge{
-font-size:11px;
-padding:7px 14px;
-margin:14px 0 18px;
-}
-
-.list-item{
-font-size:12px;
-margin:8px 0;
+font-size:20px;
 }
 
 .btn{
 padding:14px;
 font-size:14px;
-margin:14px 0;
-}
-
-.urgency{
-font-size:11px;
-}
-
-.trust{
-font-size:11px;
-}
-
-.ad-box{
-font-size:11px;
-padding:10px;
-}
-
-footer{
-font-size:9px;
 }
 
 }
 
 </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1558503872018525');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1558503872018525&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
 </head>
 
@@ -264,7 +210,7 @@ src="https://www.facebook.com/tr?id=1558503872018525&ev=PageView&noscript=1"
 <div class="container">
 
 <div class="avatar">
-<img src="https://lp2.digitaladsexpert.in/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-05-at-21.54.37.jpeg">
+<img src="munaf.jpeg">
 </div>
 
 <div class="title">Trade With Munaf™</div>
@@ -274,7 +220,7 @@ YouTube Educator | <span class="highlight">Market Mentor</span>
 </div>
 
 <div class="badge">
-Trusted by 1,000,000+ Traders Worldwide
+🔥 Trusted by 1,000,000+ Traders
 </div>
 
 <a href="https://t.me/+6YfM1aTftOI2MTc9" class="btn telegram" target="_blank">
@@ -282,10 +228,10 @@ Trusted by 1,000,000+ Traders Worldwide
 </a>
 
 <div class="list">
-<div class="list-item">✔ Weekly High-Accuracy Market Analysis</div>
-<div class="list-item">✔ Step-by-Step Smart Money Concepts</div>
-<div class="list-item">✔ Live Chart Breakdown & Strategy Learning</div>
-<div class="list-item">✔ Real Market Case Study Discussions</div>
+<div class="list-item">✔ High Accuracy Market Analysis</div>
+<div class="list-item">✔ Smart Money Concepts (Beginner → Pro)</div>
+<div class="list-item">✔ Live Chart Breakdown</div>
+<div class="list-item">✔ Real Trade Case Studies</div>
 </div>
 
 <a href="https://t.me/+6YfM1aTftOI2MTc9" class="btn telegram" target="_blank">
@@ -293,32 +239,22 @@ Trusted by 1,000,000+ Traders Worldwide
 </a>
 
 <div class="urgency">
-Limited Access • Join Before Next Market Session
+⏳ Limited Slots • Entry Closing Soon
 </div>
 
 <div class="trust">
-100% Free • No Spam • Educational Purpose Only
+100% Free • No Spam • Educational Only
 </div>
 
 <div class="ad-box">
-Advertising by
-<a href="https://t.me/+UyYzth29HpY4MDVl" target="_blank">
-Digital Ads Expert
-</a>
+Powered by <a href="https://t.me/+UyYzth29HpY4MDVl" target="_blank">Digital Ads Expert</a>
 </div>
 
 <footer>
-
 <br>
-
-<a href="https://elitepips.online/terms/" target="_blank">Terms</a> |
-<a href="https://elitepips.online/privacy/" target="_blank">Privacy</a> |
-<a href="https://elitepips.online/disclaimer/" target="_blank">Disclaimer</a>
-
+<a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Disclaimer</a>
 <br><br>
-
-This site is not affiliated with or endorsed by Facebook™.
-
+Not affiliated with Facebook™
 </footer>
 
 </div>
