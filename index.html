@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
 
 <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
+/* Same CSS */
 *{
 margin:0;
 padding:0;
@@ -40,17 +40,6 @@ position:relative;
 overflow:hidden;
 }
 
-.container::before{
-content:'';
-position:absolute;
-width:300px;
-height:300px;
-background:radial-gradient(circle,#facc15,transparent);
-top:-140px;
-right:-140px;
-opacity:.15;
-}
-
 .avatar{
 width:105px;
 height:105px;
@@ -58,7 +47,6 @@ border-radius:50%;
 overflow:hidden;
 margin:0 auto 16px;
 border:3px solid #facc15;
-box-shadow:0 0 25px rgba(250,204,21,.6);
 }
 
 .avatar img{
@@ -102,24 +90,11 @@ border-radius:40px;
 text-decoration:none;
 font-weight:700;
 font-size:15px;
-transition:.3s;
 }
 
 .telegram{
 background:linear-gradient(135deg,#22c55e,#16a34a);
 color:#fff;
-box-shadow:0 0 25px rgba(34,197,94,.6);
-animation:pulse 2s infinite;
-}
-
-.telegram:hover{
-transform:translateY(-3px) scale(1.02);
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 10px rgba(34,197,94,.4);}
-50%{box-shadow:0 0 30px rgba(34,197,94,.9);}
-100%{box-shadow:0 0 10px rgba(34,197,94,.4);}
 }
 
 .list{
@@ -130,7 +105,6 @@ margin:16px 0;
 .list-item{
 font-size:13px;
 margin:8px 0;
-opacity:.9;
 }
 
 .urgency{
@@ -155,42 +129,15 @@ border:1px solid #1e293b;
 font-size:11px;
 }
 
-.ad-box a{
-color:#facc15;
-text-decoration:none;
-}
-
 footer{
 margin-top:16px;
 font-size:10px;
 opacity:.5;
 }
-
-footer a{
-color:#facc15;
-text-decoration:none;
-}
-
-@media(max-width:480px){
-
-.container{
-padding:22px 16px;
-}
-
-.title{
-font-size:20px;
-}
-
-.btn{
-padding:14px;
-font-size:14px;
-}
-
-}
-
 </style>
 
-<!-- Meta Pixel Code -->
+
+    <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -198,20 +145,17 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script',
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init', '1558503872018525');
 fbq('track', 'PageView');
 </script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1558503872018525&ev=PageView&noscript=1"/>
-</noscript>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1558503872018525&ev=PageView&noscript=1"
+/></noscript>
 <!-- End Meta Pixel Code -->
 
+    
 </head>
 
 <body>
@@ -222,76 +166,53 @@ src="https://www.facebook.com/tr?id=1558503872018525&ev=PageView&noscript=1"/>
 <img src="munaf.jpeg">
 </div>
 
-<div class="title">Trade With Munaf™</div>
+<div class="title">మునాఫ్‌తో ట్రేడ్ చేయండి™</div>
 
 <div class="subtitle">
-YouTube Educator | <span class="highlight">Market Mentor</span>
+యూట్యూబ్ ఎడ్యుకేటర్ | <span class="highlight">మార్కెట్ మెంటర్</span>
 </div>
 
 <div class="badge">
-🔥 Trusted by 1,000,000+ Traders
+🔥 10,00,000+ ట్రేడర్ల విశ్వాసం
 </div>
 
 <!-- CTA BUTTON -->
-<a href="#" 
-class="btn telegram"
-onclick="trackSubscribe()">
-🚀 Join Free Telegram Community
+<a href="https://t.me/+6YfM1aTftOI2MTc9" target="_blank" class="btn telegram">
+🚀 ఉచిత టెలిగ్రామ్ కమ్యూనిటీలో చేరండి
 </a>
 
 <div class="list">
-<div class="list-item">✔ High Accuracy Market Analysis</div>
-<div class="list-item">✔ Smart Money Concepts (Beginner → Pro)</div>
-<div class="list-item">✔ Live Chart Breakdown</div>
-<div class="list-item">✔ Real Trade Case Studies</div>
+<div class="list-item">✔ అధిక ఖచ్చితత్వ మార్కెట్ విశ్లేషణ</div>
+<div class="list-item">✔ స్మార్ట్ మనీ కాన్సెప్ట్స్ (ప్రారంభం → నిపుణుడు)</div>
+<div class="list-item">✔ లైవ్ చార్ట్ విశ్లేషణ</div>
+<div class="list-item">✔ నిజమైన ట్రేడ్ కేస్ స్టడీస్</div>
 </div>
 
 <!-- CTA BUTTON -->
-<a href="#" 
-class="btn telegram"
-onclick="trackSubscribe()">
-🚀 Join Free Telegram Community
+<a href="https://t.me/+6YfM1aTftOI2MTc9" target="_blank" class="btn telegram">
+🚀 ఉచిత టెలిగ్రామ్ కమ్యూనిటీలో చేరండి
 </a>
 
 <div class="urgency">
-⏳ Limited Slots • Entry Closing Soon
+⏳ పరిమిత సీట్లు • త్వరలో మూసివేయబడుతుంది
 </div>
 
 <div class="trust">
-100% Free • No Spam • Educational Only
+100% ఉచితం • స్పామ్ లేదు • విద్యాపరమైనదే
 </div>
 
 <div class="ad-box">
-Powered by <a href="https://t.me/+UyYzth29HpY4MDVl" target="_blank">Digital Ads Expert</a>
+Powered by <a href="https://t.me/+UyYzth29HpY4MDVl" target="_blank">డిజిటల్ అడ్స్ ఎక్స్‌పర్ట్</a>
 </div>
 
 <footer>
 <br>
-<a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Disclaimer</a>
+<a href="#">నియమాలు</a> | <a href="#">గోప్యత</a> | <a href="#">డిస్క్లెయిమర్</a>
 <br><br>
-Not affiliated with Facebook™
+Facebook™ తో సంబంధం లేదు
 </footer>
 
 </div>
-
-<!-- TRACKING SCRIPT -->
-<script>
-function trackSubscribe(){
-
-    fbq('track', 'Subscribe', {
-        content_name: 'Telegram Join',
-        content_category: 'Trading',
-        value: 1,
-        currency: 'INR'
-    });
-
-    // delay redirect to ensure event fires
-    setTimeout(function(){
-        window.open('https://t.me/+6YfM1aTftOI2MTc9','_blank');
-    }, 200);
-
-}
-</script>
 
 </body>
 </html>
